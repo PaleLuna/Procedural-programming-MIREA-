@@ -1,0 +1,4 @@
+﻿  5.Tabulation.cpp
+D:\5.GitHub\HomeWorkRTU\Block№2\5.Tabulation\5.Tabulation.cpp(26,53): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\5.GitHub\HomeWorkRTU\Block№2\5.Tabulation\5.Tabulation.cpp(51,15): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+  5.Tabulation.vcxproj -> D:\5.GitHub\HomeWorkRTU\Block№2\5.Tabulation\Debug\5.Tabulation.exe
