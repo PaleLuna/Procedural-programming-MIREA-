@@ -1,20 +1,85 @@
-﻿// 2.Branching.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+﻿#include <iostream>
+#include <cmath>
 
-#include <iostream>
+using namespace std;
+
+double GetUserInput(char varName)
+{
+	double userInput;
+	if (varName == 'x')
+	{
+		printf("Введите переменную '%c'(не равную нулю): ", varName);
+	}
+	else
+		printf("Введите переменную '%c': ", varName);
+
+	while (true)
+	{
+		cin >> userInput;
+
+		if (userInput == 0)
+		{
+			printf("Переменная '%c' не должна равняться нулю. Введите переменную повторно\n", varName);
+
+			continue;
+		}
+		else
+			break;
+	}
+
+	return userInput;
+}
+
+double GetLn(double a, double x)
+{
+	double result = a * log(abs(x));
+	return result;
+}
+
+double GetSqrt(double a, double x)
+{
+	double result = a - pow(x, 2);
+	if (result < 0)
+	{
+		return NAN;
+	}
+	else
+	{
+		return sqrt(result);
+	}
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	system("chcp 1251>nul");
+
+	double x, a, result;
+
+	//получение переменных
+	a = GetUserInput('a');
+	x = GetUserInput('x');
+
+	if (abs(x) < 1)
+	{
+		printf("a*ln(|x|) = %.2f", GetLn(a, x));
+	}
+
+	else if(abs(x) >= 1)
+	{
+		printf("sqrt(a - x^2)");
+		result = GetSqrt(a, x);
+		if (!isnan(result))
+		{
+			printf(" = %.2f\n", result);
+		}
+		else
+		{
+			printf("\nРешений нет\n");
+		}
+		
+	}
+
+
+	system("pause>nul");
+	return 0;
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
