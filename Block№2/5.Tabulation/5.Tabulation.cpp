@@ -23,7 +23,7 @@ void FillingArray(int count, float min_x, float step)
     {
         if ((array[i] - 1) != 0)
         {
-            numer = pow(array[i], 2) + 2 * array[i] + 2;
+            numer = pow(array[i], 2) - 2 * array[i] + 2;
             den = array[i] - 1;
             funcRes = numer / den;
 

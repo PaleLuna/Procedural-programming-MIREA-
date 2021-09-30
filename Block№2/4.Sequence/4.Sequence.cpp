@@ -12,15 +12,10 @@ int UserInput()
 	while (true)
 	{
 		cin >> userInput;
-		cin.ignore(32767, '\n');
 
-		if (cin.fail())
+		if (userInput <= 0)
 		{
-			cout << "Ошибка формата. Введите целочисленное число N: ";
-
-			cin.clear();
-			cin.ignore(32767, '\n');
-
+			printf("Ошибка! Введите НАТУРАЛЬНОЕ число N!\n");
 			continue;
 		}
 		else
@@ -49,7 +44,7 @@ int main()
 
 	int n;
 
-	printf("Введите целое число 'N': ");
+	printf("Введите натуральное число 'N': ");
 	n = UserInput();
 
 	GetLine(n);
