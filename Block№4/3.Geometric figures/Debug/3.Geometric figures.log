@@ -1,0 +1,3 @@
+﻿  3.Geometric figures.cpp
+D:\5.GitHub\HomeWorkRTU\Block№4\3.Geometric figures\3.Geometric figures.cpp(54,23): warning C4305: инициализация: усечение из "double" в "float"
+  3.Geometric figures.vcxproj -> D:\5.GitHub\HomeWorkRTU\Block№4\3.Geometric figures\Debug\3.Geometric figures.exe
