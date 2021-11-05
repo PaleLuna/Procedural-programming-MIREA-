@@ -31,12 +31,12 @@ void QuickSort(char* text, int start, int end)
 	//Если есть, что сортирвать слева
 	if (start < leftHold)
 	{
-		QuickSort(text, start, leftHold-1);
+		QuickSort(text, start, --leftHold);
 	}
 	//Если есть, что сортировать справа
 	if (rightHold < end)
 	{
-		QuickSort(text, rightHold+1, end);
+		QuickSort(text, ++rightHold, end);
 	}
 
 
