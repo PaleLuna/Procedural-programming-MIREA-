@@ -19,7 +19,7 @@ int main()
 	for (int x = 0; x < 109; x++)
 	{
 		position2D.X = x;
-		position2D.Y = -(int)(amplitude * sin(pi/ frequency * x)) + offset;
+		position2D.Y = -(int)(amplitude * sin(pi / x)) + offset;
 		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), position2D);
 		printf("*");
 	}
