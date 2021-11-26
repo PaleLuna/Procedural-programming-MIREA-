@@ -1,0 +1,4 @@
+﻿  9.Numeral system translator.cpp
+D:\5.GitHub\HomeWorkRTU\Block№4\9.Numeral system translator\9.Numeral system translator.cpp(105,37): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+D:\5.GitHub\HomeWorkRTU\Block№4\9.Numeral system translator\9.Numeral system translator.cpp(74): warning C4172: возвращение адреса локальной или временной переменной : result
+  9.Numeral system translator.vcxproj -> D:\5.GitHub\HomeWorkRTU\Block№4\9.Numeral system translator\Debug\9.Numeral system translator.exe

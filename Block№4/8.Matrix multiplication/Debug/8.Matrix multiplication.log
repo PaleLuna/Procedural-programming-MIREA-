@@ -1,0 +1,22 @@
+﻿  8.Matrix multiplication.cpp
+D:\5.GitHub\HomeWorkRTU\Block№4\8.Matrix multiplication\8.Matrix multiplication.cpp(15,12): warning C4477: "printf": в строке форматирования "%-5.2f" требуется аргумент типа "double", но вариативный аргумент "1" имеет тип "T"
+          with
+          [
+              T=int
+          ]
+D:\5.GitHub\HomeWorkRTU\Block№4\8.Matrix multiplication\8.Matrix multiplication.cpp(88): message : выполняется компиляция ссылки на экземпляр шаблон функции "void ShowMatrix<int>(T **,int,int)"
+          with
+          [
+              T=int
+          ]
+D:\5.GitHub\HomeWorkRTU\Block№4\8.Matrix multiplication\8.Matrix multiplication.cpp(17,12): warning C4477: "printf": в строке форматирования "%-3i" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "T"
+          with
+          [
+              T=double
+          ]
+D:\5.GitHub\HomeWorkRTU\Block№4\8.Matrix multiplication\8.Matrix multiplication.cpp(90): message : выполняется компиляция ссылки на экземпляр шаблон функции "void ShowMatrix<double>(T **,int,int)"
+          with
+          [
+              T=double
+          ]
+  8.Matrix multiplication.vcxproj -> D:\5.GitHub\HomeWorkRTU\Block№4\8.Matrix multiplication\Debug\8.Matrix multiplication.exe
