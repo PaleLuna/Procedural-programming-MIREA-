@@ -51,9 +51,8 @@ char* NumeralSystemTranslate(int numInTenBase, int targetBase)
     {
         mod = div % targetBase;
         div = div / targetBase;
-        result[bitness] = ((mod > 9) ? inverseDictionary.at(mod) : (char)mod + '0');
-        bitness++;
-    } while (div > targetBase);
+        result[bitness++] = ((mod > 9) ? inverseDictionary.at(mod) : (char)mod + '0');
+    } while (div >= targetBase);
 
     result[bitness] = ((div > 9) ? inverseDictionary.at(div) : (char)div + '0');
 
@@ -93,6 +92,7 @@ int main()
     printf("Введите целевую систему счисления: ");
     cin >> target_base;
    
+
     //Перевод любой сс (до основания 35) в десятичную
     ten_base = NumeralSystemTranslate(num, current_base, bitness);
     if (isnan(ten_base))
@@ -104,7 +104,6 @@ int main()
     //Перевод в целевую сс
     result = NumeralSystemTranslate(ten_base, target_base);
 
-    printf("\nЧисло в десятичной системе счисления: %.0f\n", ten_base);
     printf("Число в системе счисления по основанию %i: %s\n", target_base, result);
 
 
