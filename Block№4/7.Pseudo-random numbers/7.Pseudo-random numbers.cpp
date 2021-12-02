@@ -26,7 +26,7 @@ int main()
 
 	for (int j = 0; j < count; j++)
 	{
-		printf("%-2i:%-4i| ", j, array[j]);
+		printf("%-2i:%-4i| ", j+Start, array[j]);
 		if ((j != 0) && (j % 10 == 0))
 		{
 			printf("\n");
@@ -34,10 +34,7 @@ int main()
 
 	}
 
-
-	//printf("%i\n", result);
-
-
+	delete[] array;
 
 	system("pause>nul");
 	return 0;
@@ -45,11 +42,12 @@ int main()
 
 int GeneratorOfNumbers(int* array, int s, int i, int m, int a, int c)
 {
-	if (i <= 0)
+	if (i == 0)
 	{
+		array[i] = s;
 		return s;
 	}
-	s += (m * (GeneratorOfNumbers(array, s, --i, m, a, c)) + a) % c;
+	s += (m * (GeneratorOfNumbers(array, s, i-1, m, a, c)) + a) % c;
 	array[i] = s;
 	return s;
 }
