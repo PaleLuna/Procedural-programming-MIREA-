@@ -14,7 +14,8 @@ int main()
 
 	int num1 = 0;//Рабочая копия первого числа
 	int num2 = 0;//Рабочая копия второго числа
-	int NOD = 0;//Наибольший общий делитель
+	int NOD1 = 0;//Наибольший общий делитель(Делением)
+	int NOD2 = 0;//Наибольший общий делитель(Вычитанием)
 
 	printf("%34c****Поиск наибольшего общего делителя двух чисел****\n\n\n", ' ');
 
@@ -27,23 +28,36 @@ int main()
 	num1 = userNum1;
 	num2 = userNum2;
 
-	//Поиск НОД(наибольшего общего делителя)
+	//Поиск НОД(наибольшего общего делителя) делением
 	while ((num1 != 0) && (num2 != 0))
 	{
-		if (num1 > num2)
-		{
-			num1 %= num2;
-		}
-		else
-		{
-			num2 %= num1;
-		}
+		if (num1 > num2) num1 %= num2;
+
+		else num2 %= num1;	
 	}
 
-	NOD = num1 + num2;
+	NOD1 = num1 + num2;
 
-	printf("Наибольший общий делитель чисел %i и %i равен %i\n\n\n", userNum1, userNum2, NOD);
+	num1 = userNum1;
+	num2 = userNum2;
 
+	//Поиск НОд(наибольшего общего делителя) вычитанием
+	while (num1 != num2)
+	{
+		if (num1 > num2) num1 -= num2;
+		else num2 -= num1;
+	}
+
+	NOD2 = num1;
+	if (NOD1 == NOD2)
+	{
+		printf("Наибольший общий делитель чисел %i и %i равен %i\n\n\n", userNum1, userNum2, NOD1);
+		
+		system("pause");
+		return 0;
+	}
+	
+	printf("Упс...");
 
 
 
