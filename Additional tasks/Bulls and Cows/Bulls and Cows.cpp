@@ -28,17 +28,6 @@ int main()
 	char currentNum; //Текущая цифра
 	int counter = 0; //Счетчик
 
-	//Инициализация
-	printf("Введите четырехзначное число: ");
-	cin.getline(userNum, countDigits);
-
-	if(strlen(userNum) < 4)
-	{
-		printf("Неверно введено число\n");
-		system("pause");
-		return 0;
-	}
-
 	currentNum = (1 + rand() % 10) + '0';
 	conceivedNumber[counter] = currentNum;
 
@@ -63,37 +52,63 @@ int main()
 	//Указываем конец строки
 	conceivedNumber[countDigits-1] = '\0';
 
-	//Вывод получившегося числа
-	printf("Задуманное число: %s\n\n", conceivedNumber);
+	printf("Введите своё число или \'0\', если хотите закончить игру\n");
 
-	//Поиск совпадений
-	counter = 0;
-	for (int i = 0; userNum[i]; i++)
+	int currect = 0;
+	while (currect < 4)
 	{
-		for (int j = 0; conceivedNumber[j]; j++)
+		printf("Ваше число: ");
+		cin.getline(userNum, countDigits);
+
+		if (strlen(userNum) < 4)
 		{
-			if (userNum[i] == conceivedNumber[j])
+			if ((strlen(userNum) == 1) && (userNum[0] == '0'))
 			{
-				if (j == i)
+				printf("Выходим...\n\n");
+				printf("Загаданное число компьютером: %s\n\n", conceivedNumber);
+				system("pause");
+				return 0;
+			}
+			printf("Введено некорректное число!\n");
+			continue;
+		}
+		
+		//Поиск совпадений
+		counter = 0;
+		currect = 0;
+		for (int i = 0; userNum[i]; i++)
+		{
+			for (int j = 0; conceivedNumber[j]; j++)
+			{
+				if (userNum[i] == conceivedNumber[j])
 				{
-					result[counter++] = '+';
+					if (j == i)
+					{
+						result[counter++] = '+';
+						currect++;
+						break;
+					}
+
+					result[counter++] = '-';
 					break;
 				}
-				result[counter++] = '-';
-				break;
 			}
 		}
-	}
-
-	if (counter > 0)
-	{
+		
+		if (counter == 0)
+		{
+			printf("Совпадений нет!\n");
+			continue;
+		}
 		result[counter] = '\0';
 		printf("Совпадения: %s\n", result);
-		system("pause");
-		return 0;
+		
 	}
 
-	printf("Совпадений нет!\n");
+	printf("Ура, Вы победили!\n\n\n");
+	printf("Загаданное число компьютером: %s", conceivedNumber);
+
+
 
 	system("pause");
 	return 0;
