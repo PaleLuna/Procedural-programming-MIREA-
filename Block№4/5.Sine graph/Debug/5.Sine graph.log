@@ -1,2 +1,3 @@
 ﻿  5.Sine graph.cpp
+D:\5.GitHub\HomeWorkRTU\Block№4\5.Sine graph\5.Sine graph.cpp(15,29): warning C4305: инициализация: усечение из "double" в "float"
   5.Sine graph.vcxproj -> D:\5.GitHub\HomeWorkRTU\Block№4\5.Sine graph\Debug\5.Sine graph.exe

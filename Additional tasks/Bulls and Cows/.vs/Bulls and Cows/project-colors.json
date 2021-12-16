@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9846c4b9-e553-4dcf-a494-cfd88c4d7d2b": {
+      "ProjectGuid": "9846c4b9-e553-4dcf-a494-cfd88c4d7d2b",
+      "DisplayName": "Bulls and Cows",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
