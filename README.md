@@ -1,2 +1,2 @@
-# HomeWorkRTU
+# Procedural programming(MIREA)
 Домашняя работа по процедурному программированию 2021 (РТУ МИРЭА)
